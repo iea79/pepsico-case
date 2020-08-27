@@ -1,0 +1,89 @@
+.tasks{
+	padding-top: 3em;
+	padding-bottom: 7em;
+	position: relative;
+	@media (max-width: 767px) {
+		padding: 2em 0;
+	}
+	&__detail{
+		position: absolute;
+		top: -37.42em;
+		left: -33.21em;
+		width: 55.4em;
+		height: 97.65em;
+		object-fit: contain;
+		@media (max-width: 767px) {
+			width: 25.4em;
+			height: 67.65em;
+			left: -19.21em;
+			top: -26.42em;
+		}
+	}
+	&__container{
+		max-width: 81em;
+		width: 100%;
+		padding: 0 15px;
+		margin: 0 auto;
+		position: relative;
+		z-index: 2;
+	}
+	&__title{
+		text-align: center;
+		color: #000000;
+		font-family: "Muller";
+		font-size: 3.17em;
+		font-weight: 800;
+		line-height: 1.375em;
+		@media (max-width: 767px) {
+			font-size: 1.2em;
+		}
+	}
+	&__set{		
+		counter-reset: tasks;
+		display: flex;
+		justify-content: center;
+		margin-left: -15px;
+		@media (max-width: 767px) {	
+			flex-direction: column;
+		}
+	}
+	&__item{
+		padding-left: 15px;
+		padding-top: 2em;
+		display: flex;
+		align-items: flex-end;
+		color: #000000;
+		font-family: 'Raleway';
+		font-weight: 300;
+		line-height: 1.31em;
+		@media (max-width: 767px) {
+			padding-top: 1em;
+			width: 100%;
+			padding-right: 0;
+			justify-content: center;
+		}
+		&:before{
+			counter-increment: tasks;
+	    	content: counter(tasks);
+			color: #0244cf;
+			font-family: "Carbon2";
+			font-size: 7.71em;
+			line-height: 0.7em;
+			font-weight: 700;
+			padding-right: 0.21em;
+			@media (max-width: 767px) {
+				font-size: 4.8em;
+				min-width: 1.1em;
+				text-align: center;
+			}
+		}
+		&-text{
+			font-size: 1em;
+			max-width: 12em;
+			padding-bottom: 0.9em;
+			@media (max-width: 767px) {
+				padding-bottom: 0.24em;
+			}
+		}
+	}
+}

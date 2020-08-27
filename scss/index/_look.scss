@@ -1,0 +1,108 @@
+.look{
+	position: relative;
+	&__background{
+		width: 100%;
+	}
+	&__container{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
+	&__title{
+		position: absolute;
+		left: 8.5em;
+		top: 1.6em;
+		color: #ffffff;
+		font-family: "Muller";
+		font-weight: 800;
+		font-size: 4.04em;
+		@media (max-width: 767px) {
+			font-size: 1.04em;
+		   	left: 8em;
+		}
+	}
+	&__knob{
+		position: absolute;
+		width: 6.8em;
+		height: 6.8em;
+		left: 56em;
+		top: 33em;
+		background-color: #e23429;
+		border-radius: 50%;
+		@media (max-width: 767px) {
+			width: 2em;
+			height: 2em;
+			top: 8em;
+		   	left: 13em;
+		}
+		&:after, &:before{
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%) scale(1);
+			border: 0.2px solid #e23429;
+			border-radius: 50%;
+		}
+		&:after{
+			width: 8.8em;
+			height: 8.8em;
+			animation: pulse 1.6s linear infinite;
+			@media (max-width: 767px) {
+				width: 2.8em;
+				height: 2.8em;
+			}
+		}
+		&:before{
+			width: 10.8em;
+			height: 10.8em;
+			animation: pulse 1.6s linear infinite;
+			@media (max-width: 767px) {
+				width: 3.8em;
+				height: 3.8em;
+			}
+		}
+		&-link{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			display: block;
+			z-index: 2;
+			border-radius: 50%;
+		}
+	}
+	&__play{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 1.6em;
+		height: 1.82em;
+		margin-left: 0.3em;
+		@media (max-width: 767px) {
+			width: 0.5em;
+			height: 0.72em;	
+		    margin-left: 0.08em;		
+		}	
+
+	}
+}
+
+@keyframes pulse {
+ 	0% {
+		transform: translate(-50%,-50%) scale(1);
+		opacity: 0;
+ 	}
+	50% {
+		transform: translate(-50%,-50%) scale(1.2);
+		opacity: 1;
+	}
+	100% {
+		transform: translate(-50%,-50%) scale(1.4);
+		opacity: 0;
+ 	}
+}

@@ -1,0 +1,17 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-size: calc(.00838 * 100vw + 0px);
+	@media (max-width: 767px) {
+		font-size: calc(.034 * 100vw + 0px);
+	}
+}
+
+.wrapper{
+	overflow-x: hidden;
+	font-size: 1em;
+}
