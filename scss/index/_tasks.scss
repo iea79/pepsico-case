@@ -1,6 +1,6 @@
 .tasks{
 	padding-top: 3em;
-	padding-bottom: 7em;
+	padding-bottom: 5.5em;
 	position: relative;
 	@media (max-width: 767px) {
 		padding: 2em 0;
@@ -25,7 +25,7 @@
 		padding: 0 15px;
 		margin: 0 auto;
 		position: relative;
-		z-index: 2;
+		z-index: 3;
 	}
 	&__title{
 		text-align: center;
@@ -35,7 +35,7 @@
 		font-weight: 800;
 		line-height: 1.375em;
 		@media (max-width: 767px) {
-			font-size: 1.2em;
+			font-size: 1.6em;
 		}
 	}
 	&__set{		
@@ -82,8 +82,41 @@
 			max-width: 12em;
 			padding-bottom: 0.9em;
 			@media (max-width: 767px) {
+				font-size: 1.4em;
 				padding-bottom: 0.24em;
 			}
 		}
+	}
+	&__vegetables{
+		position: absolute;
+		z-index: 2;
+		width: 45.2em;
+		height: 85.8em;
+		left: -31.21em;
+   		top: -38em;
+    	object-fit: contain;
+		@media (max-width: 767px) {
+	    	width: 12.92em;
+		    height: 18.24em;
+		    left: -7em;
+		    top: -3em;
+		}
+	}
+	&__pack{
+	    top: 7em;
+	    left: 10em;
+	    z-index: 2;
+	    position: absolute;
+	    width: 15em;
+	    height: 20.95em;
+		object-fit: contain;
+		@media (max-width: 767px) {
+	    	top: 4em;
+		    left: 24em;
+		    z-index: 2;
+		    position: absolute;
+		    width: 7em;
+		    height: 8.95em;
+		}    
 	}
 }

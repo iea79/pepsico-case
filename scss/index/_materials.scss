@@ -1,0 +1,200 @@
+.materials{
+	padding-top: 5em;
+	position: relative;
+	@media (max-width: 767px) {
+		padding-top: 2em;
+	}
+	&__head{
+		max-width: 53em;
+		margin-left: 23.45em;
+		@media (max-width: 767px) {
+			margin-left: 0;
+			padding: 0 15px;
+		}
+	}
+	&__title{
+		color: #000000;
+		font-family: "Muller";
+		font-size: 3.61em;
+		line-height: 1.37em;
+		font-weight: 800;
+		@media (max-width: 767px) {
+			font-size: 1.6em;
+		}
+		&-detail{
+			color: #0244cf;
+		}
+	}
+	&__titlesub{
+		padding-top: 0.6em;
+		color: #000000;
+		font-family: "Raleway";
+		font-size: 1.44em;
+		line-height: 1.13em;
+		font-weight: 300;
+		@media (max-width: 767px) {
+			font-size: 1.4em;
+			padding-bottom: 1em;
+		}
+	}
+	&__set{
+		padding-top: 2em;
+		display: flex;
+		justify-content: flex-start;
+    	padding-left: 18em;
+    	@media (max-width: 767px) {
+    		padding: 0 15px;
+			flex-direction: column;
+		}
+	}
+	&__box{
+		z-index: 1;
+		&:nth-child(1){
+			.materials__name{
+			    margin-top: -0.8em;
+			    transform: rotate(-4deg);
+			    margin-left: -0.8em;
+			    max-width: 9em;
+			    @media (max-width: 767px) {
+			    	margin-top: -1.2em;
+					margin-left: 0.7em;
+				}
+			}
+		}
+		&:nth-child(2){
+			z-index: 2;
+			margin-left: -13em;
+			margin-top: 7em;
+			@media (max-width: 767px) {
+		    	margin-top: 1em;
+		    	margin-left: 0;
+			}
+		}
+		&:nth-child(3){
+			z-index: 3;
+		    margin-left: -16em;
+		    margin-top: -2em;
+			.materials__name{
+		        margin-top: -1.8em;
+			    transform: rotate(-7deg);
+			    margin-left: 3.6em;
+			    max-width: 6em;
+			    text-align: center;
+			}
+			@media (max-width: 767px) {
+		    	margin-top: -3em;
+		    	margin-left: 0;
+			}
+		}
+		&:nth-child(4){
+			margin-left: -9.6em;
+    		margin-top: 11.6em;
+			.materials__name{
+		        margin-top: -2.4em;
+			    transform: rotate(15deg);
+			    margin-left: 1.4em;
+			    max-width: 6em;
+			    text-align: center;
+			}
+			@media (max-width: 767px) {
+		    	margin-left: 0;
+		    	margin-top: 0;
+			}
+		}
+	}
+	&__img{
+		width: 100%;
+	}
+	&__name{
+		color: #000000;
+		font-family: "Gentlemens Script";
+		font-size: 3.1em;
+		font-weight: 400;
+		line-height: 0.83em;
+		@media (max-width: 767px) {
+			font-size: 2.2em;
+		}
+	}
+	&__pepper{
+		position: absolute;
+		z-index: 2;
+		width: 16.92em;
+		height: 14.24em;
+		left: -8em;
+   		top: 27em;
+    	object-fit: contain;
+		@media (max-width: 767px) {
+	    	width: 8.92em;
+			height: 8.24em;
+			left: -5em;
+			top: 11em;
+
+		}
+	}
+	&__condiment{
+		position: absolute;
+		z-index: 2;
+		width: 39.3em;
+		height: 47.4em;
+		right: -18em;
+    	bottom: -7em;
+    	object-fit: contain;
+		@media (max-width: 767px) {
+	    	width: 18.3em;
+		    height: 20.4em;
+		    right: -6em;
+		    bottom: -2em;
+		}
+	}
+	&__pack{
+		position: absolute;
+		top: -4em;
+	    right: 5em;
+	    width: 59em;
+	    height: 52em;
+	    z-index: 4;
+	    object-fit: contain;
+	    @media (max-width: 767px) {
+	    	width: 21em;
+	    	height: 21em;
+    		top: 37em;
+    		right: -4em;
+		}
+		&-img{
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+			object-fit: contain;
+		}
+		&-underarm{
+			position: absolute;
+			top: 0;
+			left: 19em;
+			z-index: -1;
+			width: 30.2em;
+			height: 32.85em;
+			object-fit: contain;
+			@media (max-width: 767px) {
+	    	    width: 13.2em;
+			    height: 16.85em;
+			    left: 5em;
+			    top: -3em;
+			}
+		}
+		&-atop{
+			z-index: 2;
+			position: absolute;
+			top: 13em;
+		    right: 9em;
+		    width: 25.4em;
+		    height: 23.8em;
+		    object-fit: contain;
+		    @media (max-width: 767px) {
+		    	width: 10.4em;
+			    height: 9.8em;
+			    top: 5em;
+			    right: 2.5em;
+			}		
+		}
+	}
+}

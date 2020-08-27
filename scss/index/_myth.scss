@@ -1,0 +1,83 @@
+.myth{
+	padding-top: 2em;
+	padding-bottom: 5em;
+	text-align: center;
+	@media (max-width: 767px) {
+		padding-top: 5em;
+		padding-bottom: 2em;
+	}
+	&__container{
+		max-width: 57.8em;
+		width: 100%;
+		padding: 0 15px;
+		margin: 0 auto;
+		position: relative;
+		z-index: 1;
+	}
+	&__title{
+		color: #000000;
+		font-family: "Muller";
+		font-size: 3.61em;
+		line-height: 1.37em;
+		font-weight: 800;
+		padding-bottom: 0.2em;
+		@media (max-width: 767px) {
+			font-size: 1.6em;
+			padding-bottom: 0.6em;
+		}
+		&-detail{
+			color: #0244cf;
+		}
+	}
+	&__titlesub{
+		color: #000000;
+		font-family: "Gentlemens Script";
+		font-size: 9.12em;
+		font-weight: 400;
+		line-height: 0.8em;
+		@media (max-width: 767px) {
+			font-size: 5em;
+		}
+	}
+	&__text{
+		padding-top: 1em;
+		color: #000000;
+		font-family: "Raleway";
+		font-size: 1.8em;
+		font-weight: 300;
+		line-height: 1.32em;
+		@media (max-width: 767px) {
+			font-size: 1.4em;
+			padding-top: 0.5em;
+		}
+	}
+	&__crisps{
+		position: absolute;
+		left: -28em;
+    	top: -4em;
+		width: 34.1em;
+		height: 42.2em;
+		object-fit: contain;
+		z-index: -1;
+		@media (max-width: 767px) {
+			top: 4em;
+    		left: -1.5em;
+			width: 7em;
+			height: 7em;
+		}
+	}
+	&__face{
+		position: absolute;
+		right: -12em;
+    	top: 5.3em;
+		width: 14.5em;
+		height: 19.9em;
+		object-fit: contain;
+		z-index: -1;
+		@media (max-width: 767px) {
+			right: 0;
+			width: 5em;
+			height: 5em;
+		}
+	}
+}
