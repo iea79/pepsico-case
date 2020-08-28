@@ -4,6 +4,7 @@
 @import 'details/fonts';
 @import 'details/footer';
 @import 'details/modal';
+@import 'details/animate';
 
 @import 'index/major';
 @import 'index/tasks';
@@ -17,44 +18,3 @@
 
 
 
-.wow{
-    display: block;
-}
-
-.slideUp{
-    animation: slideUp 2s;
-}
-
-.wow[style*="visibility: visible"]{
-    animation: slideUp 1.5s;
-}
-
-@keyframes slideUp{
-    0%{
-        position: relative;
-        opacity: 0;
-        transform: translateY(1.6em);
-    }
-    2%{
-        opacity: 1;
-    }
-    100%{
-        transform: translateY(0);
-    }
-}
-
-.bounceUp{
-    animation: bounceUp 1s;
-}
-
-.parallaxBox{
-    position: relative;
-}
-
-@media (min-width: 768px){
-    .parallaxItem, .parallaxMouse{
-        perspective: 200em;
-        transform-style: preserve-3d;
-        transition: transform 0.1s linear;
-    }
-}
