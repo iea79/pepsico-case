@@ -1,0 +1,33 @@
+.wow{
+    display: block;
+}
+
+.wow[style*="visibility: visible"]{
+    animation: slideUp 2s;
+}
+
+@keyframes slideUp{
+    0%{
+        position: relative;
+        opacity: 0;
+        transform: translateY(1.6em);
+    }
+    2%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.parallaxBox{
+    position: relative;
+}
+
+@media (min-width: 768px){
+    .parallaxItem, .parallaxMouse{
+        perspective: 200em;
+        transform-style: preserve-3d;
+        transition: transform 0.1s linear;
+    }
+}
