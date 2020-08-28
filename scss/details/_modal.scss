@@ -1,0 +1,114 @@
+.modal {
+    display: none;
+    overflow: auto;
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+}
+.modal-open {
+    overflow: hidden;
+}
+.modal-close {
+    position: absolute;
+    width: 4em;
+    height: 4em;
+    right: 3em;
+    top: 3em;
+}
+.modal-close:after, .modal-close:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    border-top: 0.2em solid #fff;
+    top: 50%;
+    margin-top: -0.1em;
+}
+.modal-close:before {
+    transform: rotate(45deg);
+}
+.modal-close:after {
+    transform: rotate(-45deg);
+}
+.modal-close:hover {
+    opacity: 0.8;
+}
+.modal.fade .modal-dialog {
+    opacity: 0;
+    transform: translate(0, 25%);
+    transition: opacity 0.7s ease-out, transform 0.5s ease-out;
+}
+.modal.in {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+.modal.in .modal-dialog {
+    opacity: 1;
+    transform: translate(0, 0);
+    position: relative;
+}
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 1em auto;
+    max-width: 100%;
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .modal-dialog {
+        max-width: 81.625em;
+    }
+}
+.modal-content {
+    position: relative;
+    background-clip: padding-box;
+}
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: #000;
+    transition: 1s;
+}
+.modal-backdrop.fade {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.modal-backdrop.in {
+    opacity: 0.95;
+    filter: alpha(opacity=95);
+}
+.modal-body {
+    position: relative;
+    padding: 0;
+}
+.video__wrapper {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+@media (min-width: 768px) {
+    .video__wrapper {
+        padding-bottom: 58%;
+    }
+}
+.video__wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

@@ -38,8 +38,18 @@ $(document).ready(function(){
         $(".stages__for").slick("slickGoTo", index);
     });
 
-    $('[data-fancybox="video"]').fancybox({
-        hash: false,
+    var preview = {
+        id: 151551472,
+    };
+
+    var player1 = new Vimeo.Player('short-video', preview);
+
+    $('#previwe').on('show.bs.modal', function() {
+        player1.play();
+    });
+
+    $('#previwe').on('hide.bs.modal', function() {
+        player1.pause();
     });
 
 });

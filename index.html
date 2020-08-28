@@ -15,7 +15,8 @@
       <div class="major"><img src="img/major-background.jpg" alt="major-background" class="major__background"/>
         <div class="major__container">
           <div class="major__title">Документальный фильм</div>
-          <div class="major__play"><a href="https://www.youtube.com/watch?v=N-U-UtoAyPg" data-fancybox="video" class="major__play-knob"><img src="img/logo.png"/><svg class='major__play-detail' xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28"><g><g><path d="M23.734 14L.266 27.547V.45z"/></g></g></svg></a>
+          <div class="major__play">
+            <div data-toggle="modal" data-target="#previwe" class="major__play-knob"><img src="img/logo.png" alt="logo"/><svg class='major__play-detail' xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28"><g><g><path d="M23.734 14L.266 27.547V.45z"/></g></g></svg></div>
             <div class="major__play-text">Посмотрите трейлер</div>
           </div>
         </div>
@@ -186,7 +187,9 @@
       <div class="look"><img src="img/look-background.png" alt="look-background" class="look__background"/>
         <div class="look__container">
           <div class="look__title">ПОСМОТРИТЕ</div>
-          <div class="look__knob"><a href="https://www.youtube.com/watch?v=N-U-UtoAyPg" data-fancybox="video" class="look__knob-link"><img src="img/look-play.png" alt="look-play" class="look__play"/></a></div>
+          <div class="look__knob">
+            <div data-toggle="modal" data-target="#previwe" class="look__knob-link"><img src="img/look-play.png" alt="look-play" class="look__play"/></div>
+          </div>
         </div>
       </div>
       <footer class="footer">
@@ -198,6 +201,13 @@
           </div>
         </div>
       </footer>
+      <div id="previwe" class="modal fade play"><a href="#" data-dismiss="modal" class="modal-close"></a>
+        <div class="modal-dialog">
+          <div class="video__wrapper">
+            <div id="short-video"></div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Script-->
     <script src="js/main.min.js"></script>
