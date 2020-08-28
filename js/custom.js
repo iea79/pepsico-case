@@ -48,7 +48,7 @@ $(document).ready(function(){
     });
 
     var preview = {
-        id: 264134942,
+        id: 452520245,
     };
 
     var player1 = new Vimeo.Player('short-video', preview);
