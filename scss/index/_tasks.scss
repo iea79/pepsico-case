@@ -22,7 +22,7 @@
 	&__container{
 		max-width: 81em;
 		width: 100%;
-		padding: 0 15px;
+		padding: 0 0.95em;
 		margin: 0 auto;
 		position: relative;
 		z-index: 3;
@@ -35,7 +35,7 @@
 		font-weight: 800;
 		line-height: 1.375em;
 		@media (max-width: 767px) {
-			font-size: 1.6em;
+			font-size: 1.75em;
 		}
 	}
 	&__set{		
@@ -57,7 +57,7 @@
 		font-weight: 300;
 		line-height: 1.31em;
 		@media (max-width: 767px) {
-			padding-top: 1em;
+			padding-top: 1.6em;
 			width: 100%;
 			padding-right: 0;
 			justify-content: center;
@@ -72,8 +72,8 @@
 			font-weight: 700;
 			padding-right: 0.21em;
 			@media (max-width: 767px) {
-				font-size: 4.8em;
-				min-width: 1.1em;
+				padding-right: 0.3em;
+				font-size: 8.84em;
 				text-align: center;
 			}
 		}
@@ -82,8 +82,8 @@
 			max-width: 12em;
 			padding-bottom: 0.9em;
 			@media (max-width: 767px) {
-				font-size: 1.4em;
-				padding-bottom: 0.24em;
+				font-size: 1.12em;
+				padding-bottom: 1em;
 			}
 		}
 	}
@@ -96,10 +96,20 @@
    		top: -38em;
     	object-fit: contain;
 		@media (max-width: 767px) {
-	    	width: 12.92em;
-		    height: 18.24em;
-		    left: -7em;
-		    top: -3em;
+	    	display: none;
+		}
+		&-mob{
+			display: none;
+			position: absolute;
+			z-index: 2;
+			width: 14.1em;
+		    height: 24.21em;
+		   	right: -10.4em;
+		    top: 13em;
+	    	object-fit: contain;
+	    	@media (max-width: 767px) {
+		    	display: block;
+			}
 		}
 	}
 	&__pack{
@@ -111,12 +121,20 @@
 	    height: 20.95em;
 		object-fit: contain;
 		@media (max-width: 767px) {
-	    	top: 4em;
-		    left: 24em;
-		    z-index: 2;
-		    position: absolute;
-		    width: 7em;
-		    height: 8.95em;
-		}    
+	    	display: none;
+		}
+		&-mob{
+			display: none;
+			position: absolute;
+			z-index: 2;
+			width: 6.2em;
+		    height: 12.5em;
+		   	left: 0;
+		    top: 7em;
+	    	object-fit: contain;
+	    	@media (max-width: 767px) {
+		    	display: block;
+			}
+		}   
 	}
 }

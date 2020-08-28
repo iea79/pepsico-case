@@ -20,23 +20,26 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding-bottom: 0.2em;
+		padding-bottom: 0.4em;
 		&-num{
 			color: #0244cf;
 			font-family: "Gentlemens Script";
-			font-size: 2.523em;
+			font-size: 3.07em;
 			font-weight: 400;
+			@media (max-width: 767px) {
+				font-size: 3.86em;
+			}
 		}
 		@media (max-width: 767px) {
-			font-size: 2em;
-			padding-bottom: 0.5em;
+			font-size: 2.46em;
+			padding-bottom: 0.75em;
 		}
 	}
 	&__titlesub{
 		text-align: center;
 		color: #000000;
 		font-family: "Muller";
-		font-size: 2.12em;
+		font-size: 2.58em;
 		font-weight: 300;
 		line-height: 1.38em;
 		text-transform: uppercase;
@@ -59,8 +62,10 @@
 		display: flex;
 		align-items: center;
 		@media (max-width: 767px) {
+			max-width: 22.4em;
+			margin: 0 auto;	
 			width: 100%;
-			padding-top: 1em;
+			padding-top: 1.4em;
 		}
 	}
 	&__num{
@@ -82,13 +87,24 @@
 		font-size: 1.12em;
 		font-weight: 300;
 		line-height: 1.332em;
+		@media (max-width: 767px) {
+			padding-top: 0.2em;
+		}
 	}
 	&__img{
 		margin-top: -17.42em;
 		width: 100%;
 		display: block;
 		@media (max-width: 767px) {
-			margin-top: -2em;
+			display: none;
+		}
+		&-mob{
+			margin-top: -34em;
+			width: 100%;
+			display: none;
+			@media (max-width: 767px) {
+				display: block;
+			}
 		}
 	}
 }

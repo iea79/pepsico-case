@@ -7,14 +7,6 @@ $(document).ready(function(){
         dots: false,
         asNavFor: '.stages__nav-set',
         fade: true,
-        responsive: [ 
-            {
-                breakpoint: 768,
-                settings: {
-                    adaptiveHeight: true,
-                }
-            },
-        ]
     });
     $('.stages__nav-set').slick({
         slidesToShow: 5,
@@ -52,4 +44,49 @@ $(document).ready(function(){
         player1.pause();
     });
 
+    let wowOffset = $(window).height() / 4;
+
+    let wow = new WOW({
+        boxClass:     'wow',
+        animateClass: 'slideUp', 
+        offset:       wowOffset,
+    });
+    wow.init();
+
+
+
 });
+
+function mouseMoveParallax() {
+    let wrapper = $('.parallaxBox');
+    let item = wrapper.find('.parallaxMouse');
+    let speed = 0;
+    let offsetX;
+    let offsetY;
+
+    if (isXsWidth()) return false;
+
+    wrapper.on('mousemove', function(even) {
+        // console.log(even.screenX);
+        // console.log(even.clientX - $(window).width() / 2);
+        offsetX = -(even.clientX - $(window).width() / 2);
+        offsetY = -(even.clientY - $(window).width() / 2);
+
+        if (isXsWidth()) {
+            item.removeAttr('style');
+        } else {
+            item.each(function(index, el) {
+                speed = $(el).data('speed');
+                $(el).attr('style', 'transform: translate3d('+(offsetX*speed/1000)+'em, '+(offsetY*speed/1000)+'em , 0)');
+            });
+        }
+
+    });
+
+    wrapper.on('mouseleave', function(even) {
+        item.each(function(index, el) {
+            speed = $(el).data('speed');
+            $(el).attr('style', 'transform: translate3d(0, 0 , 0)');
+        });
+    });
+}

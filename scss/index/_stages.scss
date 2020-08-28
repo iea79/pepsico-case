@@ -8,7 +8,7 @@
 	&__container{
 		max-width: 85em;
 		width: 100%;
-		padding: 0 15px;
+		padding: 0 0.95em;
 		margin: 0 auto;
 		position: relative;
 		z-index: 2;
@@ -23,6 +23,7 @@
 			display: flex !important;
 			@media (max-width: 767px) {
 				flex-wrap: wrap;
+				justify-content: center;
 			}
 			&:focus{
 				outline: none;
@@ -32,6 +33,7 @@
 			width: 50%;
 			@media (max-width: 767px) {
 				width: 100%;
+				order: 2;
 			}
 		}
 		&-content{
@@ -45,11 +47,13 @@
 		    justify-content: flex-end;
 		    margin-top: 7em;
 		    @media (max-width: 767px) {
+		    	text-align: center;
 				width: 100%;
 				margin-top: 1em;
 				padding-left: 0;
 				justify-content: flex-start;
 				min-height: auto;
+				order: 1;
 			}
 		}
 		&-name{
@@ -60,7 +64,7 @@
 			line-height: 0.98em;
 			font-weight: 400;
 			@media (max-width: 767px) {
-				font-size: 3em;
+				font-size: 3.002em;
 			}
 		}
 		&-namesub{
@@ -86,8 +90,9 @@
 			position: relative;
 			right: 0;
 			bottom: 0;
-			padding-top: 4em;
+			padding-top: 3em;
 			padding-left: 0;
+			justify-content: center;
 		}
 		&-set{
 			display: flex;
@@ -125,6 +130,9 @@
 			&:hover{
 				opacity: 0.5;
 			}
+			@media (max-width: 767px) {
+				display: none;
+			}
 		}
 		&-prev{
 			background-image: url(../img/stages-prev.png);
@@ -147,10 +155,10 @@
 		height: 35em;
 		object-fit: contain;
 		@media (max-width: 767px) {
-			left: -3em;
-		    top: 17em;
-		    width: 11.78em;
-		    height: 11.4em;
+		    left: -9.2em;
+		    top: 28.5em;
+		    width: 18.78em;
+		    height: 10.8em;
 		}
 	}
 	&__pack{
@@ -161,10 +169,10 @@
 		height: 46.4em;
 		object-fit: contain;
 		@media (max-width: 767px) {
-			right: -2.6em;
-		    top: -2em;
-		    width: 11.78em;
-		    height: 11.4em;
+		    right: -5.5em;
+		    top: 27.5em;
+		    width: 17.78em;
+		    height: 19.6em;
 		}
 	}
 }

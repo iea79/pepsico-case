@@ -2,6 +2,17 @@
 	position: relative;
 	&__background{
 		width: 100%;
+		display: block;
+		@media (max-width: 767px) {
+			display: none;
+		}
+		&-mob{
+			width: 100%;
+			display: none;
+			@media (max-width: 767px) {
+				display: block;
+			}
+		}
 	}
 	&__container{
 		position: absolute;
@@ -19,8 +30,8 @@
 		font-weight: 800;
 		font-size: 4.04em;
 		@media (max-width: 767px) {
-			font-size: 1.04em;
-		   	left: 8em;
+			font-size: 1.8em;
+		   	left: 4.5em;
 		}
 	}
 	&__knob{
@@ -32,10 +43,10 @@
 		background-color: #e23429;
 		border-radius: 50%;
 		@media (max-width: 767px) {
-			width: 2em;
-			height: 2em;
-			top: 8em;
-		   	left: 13em;
+			width: 4em;
+			height: 4em;
+			top: 13.5em;
+    		left: 12.5em;
 		}
 		&:after, &:before{
 			content: '';
@@ -52,8 +63,8 @@
 			animation: 1s pulse1 infinite;
 			opacity: 0.8;
 			@media (max-width: 767px) {
-				width: 2.8em;
-				height: 2.8em;
+				width: 6.8em;
+				height: 6.8em;
 			}
 		}
 		&:after{
@@ -62,8 +73,8 @@
 		    opacity: 0.6;
 			animation: 1s pulse2 infinite;
 			@media (max-width: 767px) {
-				width: 3.8em;
-				height: 3.8em;
+				width: 8.8em;
+				height: 8.8em;
 			}
 		}
 		&-link{
@@ -87,11 +98,24 @@
 		height: 1.82em;
 		margin-left: 0.3em;
 		@media (max-width: 767px) {
-			width: 0.5em;
-			height: 0.72em;	
-		    margin-left: 0.08em;		
-		}	
-
+			width: 1em;
+			height: 1.11em;	
+		    margin-left: 0.2em;
+		}
+	}
+	&__pack{
+		position: absolute;
+		width: 42.21em;
+		height: 51.05em;
+		top: 13.5em;
+		right: 0.45em;
+		object-fit: contain;
+		@media (max-width: 767px) {
+			width: 19.12em;
+			height: 21em;
+		    top: 6.5em;
+			right: -11.4em;
+		}
 	}
 }
 

@@ -2,6 +2,17 @@
 	position: relative;
 	&__background{
 		width: 100%;
+		display: block;
+		@media (max-width: 767px) {
+			display: none;
+		}
+		&-mob{
+			width: 100%;
+			display: none;
+			@media (max-width: 767px) {
+				display: block;
+			}
+		}
 	}
 	&__container{
 		position: absolute;
@@ -19,9 +30,9 @@
 		font-weight: 300;
 		font-size: 2.0625em;
 		@media (max-width: 767px) {
-			font-size: 0.8em;
-		    top: 5em;
-		    right: 2em;
+			font-size: 1.6em;
+	        top: 3.5em;
+    		right: 1em;
 		}
 	}
 	&__play{
@@ -32,8 +43,9 @@
 		display: flex;
 		align-items: center;
 		@media (max-width: 767px) {
-			top: 2.5em;
-			left: 5.8em;
+			top: auto;
+		    bottom: 3.5em;
+    		left: 3.8em;
 		}
 		&-knob{
 			border-radius: 50%;
@@ -48,8 +60,8 @@
 				}
 			}
 			@media (max-width: 767px) {
-				width: 2.5em;
-				height: 2.5em;
+				width: 5.55em;
+				height: 5.55em;
 			}
 			img{
 				width: 100%;
@@ -64,10 +76,10 @@
 			left: 2.8em;
 			top: 2.75em;
 			@media (max-width: 767px) {
-				width: 0.5em;
-			    height: 0.75em;
-			    left: 1.1em;
-			    top: 1em;
+				width: 1.3em;
+			    height: 1.5em;
+			    left: 2.3em;
+    			top: 2.1em;
 			}
 			path{
 				transition: all .5s;
@@ -83,7 +95,8 @@
 			font-size: 1.1em;
 			line-height: 1.3em;
 			@media (max-width: 767px) {
-				font-size: 0.6em;
+				font-size: 1.1em;
+				padding-left: 0.85em;
 			}
 		}
 	}

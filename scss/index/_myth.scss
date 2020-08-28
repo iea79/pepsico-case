@@ -4,12 +4,12 @@
 	text-align: center;
 	@media (max-width: 767px) {
 		padding-top: 5em;
-		padding-bottom: 2em;
+		padding-bottom: 4em;
 	}
 	&__container{
 		max-width: 57.8em;
 		width: 100%;
-		padding: 0 15px;
+		padding: 0 0.95em;
 		margin: 0 auto;
 		position: relative;
 		z-index: 1;
@@ -22,8 +22,8 @@
 		font-weight: 800;
 		padding-bottom: 0.2em;
 		@media (max-width: 767px) {
-			font-size: 1.6em;
-			padding-bottom: 0.6em;
+			font-size: 1.84em;
+			padding-bottom: 1.7em;
 		}
 		&-detail{
 			color: #0244cf;
@@ -36,7 +36,7 @@
 		font-weight: 400;
 		line-height: 0.8em;
 		@media (max-width: 767px) {
-			font-size: 5em;
+			font-size: 5.7em;
 		}
 	}
 	&__text{
@@ -47,8 +47,8 @@
 		font-weight: 300;
 		line-height: 1.32em;
 		@media (max-width: 767px) {
-			font-size: 1.4em;
-			padding-top: 0.5em;
+			font-size: 1em;
+			padding-top: 0.9em;
 		}
 	}
 	&__crisps{
@@ -60,10 +60,11 @@
 		object-fit: contain;
 		z-index: -1;
 		@media (max-width: 767px) {
-			top: 4em;
-    		left: -1.5em;
-			width: 7em;
-			height: 7em;
+		    top: 4.4em;
+		    left: -2.2em;
+		    width: 6.5em;
+		    height: 8.46em;
+		    transform: rotate(-12deg);
 		}
 	}
 	&__face{
@@ -75,9 +76,10 @@
 		object-fit: contain;
 		z-index: -1;
 		@media (max-width: 767px) {
-			right: 0;
+			top: 6.2em;
+			right: -0.6em;
 			width: 5em;
-			height: 5em;
+			height: 7.6em;
 		}
 	}
 }
