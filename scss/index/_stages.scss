@@ -1,0 +1,170 @@
+.stages{
+	padding-top: 1em;
+	padding-bottom: 1em;
+	position: relative;
+	@media (max-width: 767px) {
+		padding-bottom: 3em;
+	}
+	&__container{
+		max-width: 85em;
+		width: 100%;
+		padding: 0 15px;
+		margin: 0 auto;
+		position: relative;
+		z-index: 2;
+	}
+	&__for{
+		width: 100%;
+		cursor: grab;
+		&:active{
+			cursor: grabbing
+		}
+		&-box{
+			display: flex !important;
+			@media (max-width: 767px) {
+				flex-wrap: wrap;
+			}
+			&:focus{
+				outline: none;
+			}
+		}
+		&-img{
+			width: 50%;
+			@media (max-width: 767px) {
+				width: 100%;
+			}
+		}
+		&-content{
+			max-width: 38em;
+			width: 50%;
+    		padding-left: 2em;
+		    height: 100%;
+		    min-height: 10.32em;
+		    display: flex;
+		    flex-direction: column;
+		    justify-content: flex-end;
+		    margin-top: 7em;
+		    @media (max-width: 767px) {
+				width: 100%;
+				margin-top: 1em;
+				padding-left: 0;
+				justify-content: flex-start;
+				min-height: auto;
+			}
+		}
+		&-name{
+			opacity: 0.71;
+			color: #2f2f2f;
+			font-family: "Gentlemens Script";
+			font-size: 3.76em;
+			line-height: 0.98em;
+			font-weight: 400;
+			@media (max-width: 767px) {
+				font-size: 3em;
+			}
+		}
+		&-namesub{
+			padding-top: 0.5em;
+			opacity: 0.49;
+			color: #2f2f2f;
+			font-family: "Gentlemens Script";
+			font-size: 2em;
+			line-height: 1em;
+			font-weight: 400;
+		}
+	}
+	&__nav{
+		position: absolute;
+		max-width: 30.9em;
+		width: 100%;
+		right: 9.5em;
+		bottom: 17em;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@media (max-width: 767px) {
+			position: relative;
+			right: 0;
+			bottom: 0;
+			padding-top: 4em;
+			padding-left: 0;
+		}
+		&-set{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			max-width: 12.6em;
+			.slick-list{
+				padding: 0 !important;
+			}
+			.slick-track{
+			    display: flex;
+			}
+		}
+		&-box{
+			background-color: rgba(0, 0, 0, 0.15);
+			min-width: 0.95em;
+			max-width: 0.95em;
+			height: 0.95em;
+			margin: 0 0.8em;
+			border-radius: 50%;
+			cursor: pointer;
+			&:focus{
+				outline: none;
+			}
+			&.slick-current{
+				cursor: default;
+				background-color: #0244cf;
+			}
+		}
+		&-prev, &-next{
+			width: 7.1em;
+			height: 2.2em;
+			cursor: pointer;
+			transition: all .5s;
+			&:hover{
+				opacity: 0.5;
+			}
+		}
+		&-prev{
+			background-image: url(../img/stages-prev.png);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+		}
+		&-next{
+			background-image: url(../img/stages-next.png);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+		}
+	}
+	&__potatoes{
+		position: absolute;
+		left: -23.84em;
+		top: 3em;
+		width: 61.2em;
+		height: 35em;
+		object-fit: contain;
+		@media (max-width: 767px) {
+			left: -3em;
+		    top: 17em;
+		    width: 11.78em;
+		    height: 11.4em;
+		}
+	}
+	&__pack{
+		position: absolute;
+		right: -7.3em;
+		top: 3em;
+		width: 42.78em;
+		height: 46.4em;
+		object-fit: contain;
+		@media (max-width: 767px) {
+			right: -2.6em;
+		    top: -2em;
+		    width: 11.78em;
+		    height: 11.4em;
+		}
+	}
+}
