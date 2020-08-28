@@ -1,3 +1,20 @@
+var app = {
+    pageScroll: '',
+    lgWidth: 1200,
+    mdWidth: 992,
+    smWidth: 768,
+    resized: false,
+    iOS: function() { return navigator.userAgent.match(/iPhone|iPad|iPod/i); },
+    touchDevice: function() { return navigator.userAgent.match(/iPhone|iPad|iPod|Android|BlackBerry|Opera Mini|IEMobile/i); }
+};
+
+function isLgWidth() { return $(window).width() >= app.lgWidth; } // >= 1200
+function isMdWidth() { return $(window).width() >= app.mdWidth && $(window).width() < app.lgWidth; } //  >= 992 && < 1200
+function isSmWidth() { return $(window).width() >= app.smWidth && $(window).width() < app.mdWidth; } // >= 768 && < 992
+function isXsWidth() { return $(window).width() < app.smWidth; } // < 768
+function isIOS() { return app.iOS(); } // for iPhone iPad iPod
+function isTouch() { return app.touchDevice(); } // for touch device
+
 $(document).ready(function(){
 
    $('.stages__for').slick({
@@ -44,18 +61,22 @@ $(document).ready(function(){
         player1.pause();
     });
 
+    mouseMoveParallax();
+
     let wowOffset = $(window).height() / 4;
 
     let wow = new WOW({
         boxClass:     'wow',
         animateClass: 'slideUp', 
-        offset:       wowOffset,
+        offset:        wowOffset,
     });
+
     wow.init();
 
-
-
+    
+    
 });
+
 
 function mouseMoveParallax() {
     let wrapper = $('.parallaxBox');

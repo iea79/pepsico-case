@@ -15,70 +15,46 @@
 @import 'index/headband';
 @import 'index/look';
 
-.slideUp {
-  animation: slideUp 2s;
+
+
+.wow{
+    display: block;
 }
 
-@keyframes slideUp {
-  0% {
+.slideUp{
+    animation: slideUp 2s;
+}
+
+.wow[style*="visibility: visible"]{
+    animation: slideUp 1.5s;
+}
+
+@keyframes slideUp{
+    0%{
+        position: relative;
+        opacity: 0;
+        transform: translateY(1.6em);
+    }
+    2%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.bounceUp{
+    animation: bounceUp 1s;
+}
+
+.parallaxBox{
     position: relative;
-    opacity: 0;
-    transform: translateY(1.6em);
-  }
-  2% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(0);
-  }
 }
 
-// .bounceUp {
-//   animation: bounceUp 1s;
-// }
-
-// @keyframes bounceUp {
-//   60%, 75%, 90%, from, to {
-//     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-//   }
-//   from {
-//     opacity: 0;
-//     transform: translate3d(0, 187.5em, 0);
-//   }
-//   60% {
-//     opacity: 1;
-//     transform: translate3d(0, -1.4em, 0);
-//   }
-//   75% {
-//     transform: translate3d(0, 0.66em, 0);
-//   }
-//   90% {
-//     transform: translate3d(0, -0.35em, 0);
-//   }
-//   to {
-//     transform: translate3d(0, 0, 0);
-//   }
-// }
-// .wow {
-//   display: block;
-// }
-// .wow[style*="visibility: visible"] {
-//   animation: slideUp 1.5s;
-// }
-
-
-.parallaxBox {
-  position: relative;
-}
-@media (min-width: 768px) {
-  .parallaxItem, .parallaxMouse {
-    perspective: 200em;
-    transform-style: preserve-3d;
-    transition: transform 0.1s linear;
-  }
-}
-@media (max-width: 767px) {
-  .parallaxItem, .parallaxMouse {
-    display: none;
-  }
+@media (min-width: 768px){
+    .parallaxItem, .parallaxMouse{
+        perspective: 200em;
+        transform-style: preserve-3d;
+        transition: transform 0.1s linear;
+    }
 }
