@@ -1,5 +1,9 @@
 .look{
 	position: relative;
+	background-image: url(../img/look-background.png);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: cover;
 	&__background{
 		width: 100%;
 		display: block;
@@ -15,38 +19,64 @@
 		}
 	}
 	&__container{
-		position: absolute;
-		left: 0;
-		top: 0;
+		max-width: 55.86em;
+		margin: 0 auto;
+		padding: 6.56em 0.95em 10em 0.95em;
 		width: 100%;
-		height: 100%;
+		@media (max-width: 767px) {
+			padding: 3em 0.95em 3em 0.95em;
+		}
 	}
 	&__title{
-		position: absolute;
-		left: 8.5em;
-		top: 1.6em;
 		color: #ffffff;
 		font-family: "Muller";
 		font-weight: 800;
 		font-size: 4.04em;
+		padding-left: 0.77em;
+		padding-bottom: 0.25em;
 		@media (max-width: 767px) {
 			font-size: 1.8em;
 		   	left: 4.5em;
+		   	padding-bottom: 0.35em;
+		}
+	}
+	&__titlesub{
+		color: #ffffff;
+		font-family: "Gentlemens Script";
+		font-size: 5.2em;
+		font-weight: 400;
+		line-height: 1em;
+		padding-left: 2.63em;
+		padding-bottom: 0.6em;
+		@media (max-width: 767px) {
+			font-size: 2.2em;
+		}
+	}
+	&__video{
+		position: relative;
+		width: 100%;
+		height: 31.58em;
+		background-image: url(../img/look-video.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		margin: 0 auto;
+		@media (max-width: 767px) {
+			height: 15.58em;
 		}
 	}
 	&__knob{
 		position: absolute;
 		width: 6.8em;
 		height: 6.8em;
-		left: 56em;
-		top: 33em;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
 		background-color: #e23429;
 		border-radius: 50%;
 		@media (max-width: 767px) {
 			width: 4em;
 			height: 4em;
-			top: 13.5em;
-    		left: 12.5em;
 		}
 		&:after, &:before{
 			content: '';
@@ -103,18 +133,36 @@
 		    margin-left: 0.2em;
 		}
 	}
+	&__bank{
+		position: absolute;
+		width: 49.5em;
+		height: 53.85em;
+		top: 13em;
+		left: -10.02em;
+		object-fit: contain;
+		@media (max-width: 767px) {
+			width: 23em;
+			height: 23em;
+		    top: 7em;
+			left: -14em;
+			object-position: right;
+			z-index: 2;
+		}
+	}
 	&__pack{
 		position: absolute;
-		width: 42.21em;
-		height: 51.05em;
+		width: 43.32em;
+		height: 51.53em;
 		top: 13.5em;
-		right: 0.45em;
+		right: -3.6em;
 		object-fit: contain;
 		@media (max-width: 767px) {
 			width: 19.12em;
 			height: 21em;
-		    top: 6.5em;
-			right: -11.4em;
+		    top: 8em;
+			right: -12em;
+			object-position: left;
+			z-index: 2;
 		}
 	}
 }

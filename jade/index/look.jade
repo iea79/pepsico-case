@@ -1,17 +1,19 @@
 .look.parallaxBox
 
-	img(src='img/look-background.png' alt='look-background' class='look__background')
+	img(src='img/pack4.png' alt='look-pack' class='look__pack parallaxMouse' data-speed='1.2')
 
-	img(src='img/look-backgroundMob.png' alt='look-backgroundMob' class='look__background-mob')
-
-	img(src='img/pack4.png' alt='look-pack' class='look__pack parallaxMouse' data-speed='0.7')
+	img(src='img/bank2.png' alt='look-bank' class='look__bank parallaxMouse' data-speed='0.4')
 
 	.look__container
 
 		.look__title ПОСМОТРИТЕ
 
-		.look__knob
+		.look__titlesub Что у нас получилось
 
-			.look__knob-link(data-toggle='modal' data-target='#previwe')
+		.look__video
 
-				img(src='img/look-play.png' alt='look-play' class='look__play')
+			.look__knob
+
+				.look__knob-link(data-toggle='modal' data-target='#previwe')
+
+					img(src='img/look-play.png' alt='look-play' class='look__play')

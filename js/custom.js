@@ -24,6 +24,7 @@ $(document).ready(function(){
         dots: false,
         asNavFor: '.stages__nav-set',
         fade: true,
+        adaptiveHeight: true,
     });
     $('.stages__nav-set').slick({
         slidesToShow: 5,
@@ -49,6 +50,7 @@ $(document).ready(function(){
 
     var preview = {
         id: 452520245,
+        title: false,
     };
 
     var player1 = new Vimeo.Player('short-video', preview);

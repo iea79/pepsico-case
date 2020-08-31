@@ -5,7 +5,6 @@
 }
 
 body{
-	overflow-x: hidden;
 	font-size: calc(.00838 * 100vw + 0px);
 	@media (max-width: 767px) {
 		font-size: calc(.034 * 100vw + 0px);
@@ -13,5 +12,6 @@ body{
 }
 
 .wrapper{
+	overflow: hidden;
 	font-size: 1em;
 }

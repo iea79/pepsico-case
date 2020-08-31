@@ -19,21 +19,27 @@
 		&:active{
 			cursor: grabbing
 		}
+		@media (max-width: 767px) {
+			width: auto;
+			margin: 0 -3em;
+		}
 		&-box{
 			display: flex !important;
 			@media (max-width: 767px) {
 				flex-wrap: wrap;
-				justify-content: center;
+				justify-content: center;		
 			}
 			&:focus{
 				outline: none;
 			}
 		}
 		&-img{
+			object-fit: contain;
 			width: 50%;
 			@media (max-width: 767px) {
 				width: 100%;
 				order: 2;
+				max-height: 26em;
 			}
 		}
 		&-content{
@@ -49,11 +55,11 @@
 		    @media (max-width: 767px) {
 		    	text-align: center;
 				width: 100%;
-				margin-top: 1em;
-				padding-left: 0;
+				margin-top: 0;
 				justify-content: flex-start;
 				min-height: auto;
 				order: 1;
+				padding: 0 3em;
 			}
 		}
 		&-name{
@@ -90,7 +96,7 @@
 			position: relative;
 			right: 0;
 			bottom: 0;
-			padding-top: 3em;
+			padding-top: 0.5em;
 			padding-left: 0;
 			justify-content: center;
 		}
@@ -156,7 +162,7 @@
 		object-fit: contain;
 		@media (max-width: 767px) {
 		    left: -9.2em;
-		    top: 28.5em;
+		    top: 20.5em;
 		    width: 18.78em;
 		    height: 10.8em;
 		}
@@ -170,7 +176,7 @@
 		object-fit: contain;
 		@media (max-width: 767px) {
 		    right: -5.5em;
-		    top: 27.5em;
+		    top: 19.5em;
 		    width: 17.78em;
 		    height: 19.6em;
 		}
